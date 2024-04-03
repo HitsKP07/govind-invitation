@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>govind-Invitation</title>
+    <style>
+        .d-flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .govind-wedding {
+            text-align: center;
+            position: relative;
+
+        }
+
+        .govind-wedding h1 {
+            margin-bottom: 16rem;
+
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .timer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .date-time {
+            display: grid;
+            grid-template-columns: 25fr 25fr 25fr 25fr;
+            margin: 20px;
+
+        }
+
+        .caricatures-img {
+            position: relative;
+        }
+
+        .days,
+        .hours,
+        .minuts,
+        .second {
+            font-size: 45px;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .couple {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+            padding: 0 10px 0 10px;
+            margin-top: -10px;
+        }
+
+        .patt {
+            justify-content: space-between;
+            padding: 0 40px 0 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/hath.png" alt="" width="10%">
+        <img src="img/lord-ganesh-vector.png" alt="" width="10%">
+        <img src="img/hath.png" alt="" width="10%">
+    </header>
+    <center>
+        <h1>Welcome To Our Wedding</h1>
+    </center>
+    <div class="govind-wedding">
+        <img src="img/background.JPG" width="100%" alt="" class="background">
+        <h1>G & S </h1>
+    </div>
+    <div class="timer">
+        <div class="date-time">
+            <div class="caricatures-img">
+                <img src="img/timer.png" alt="" width="100%">
+                <h2 class="days">00</h2>
+            </div>
+            <div class="caricatures-img">
+                <img src="img/timer.png" alt="" width="100%">
+                <h2 class="hours">00</h2>
+            </div>
+            <div class="caricatures-img">
+                <img src="img/timer.png" alt="" width="100%">
+                <h2 class="minuts">00</h2>
+            </div>
+            <div class="caricatures-img">
+                <img src="img/timer.png" alt="" width="100%">
+                <h2 class="second">00</h2>
+            </div>
+
+        </div>
+    </div>
+
+    <center>
+        <h1>Govind & Sushmita </h1>
+        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis eos sed voluptates illo dolore</h3>
+        <h1>18April,2024</h1>
+    </center>
+
+    <div class="details">
+        <div class="couple d-flex">
+            <img src="img/govind.png" alt="" width="100%">
+            <div>
+                <h2>Govind</h2>
+                <h3>Mangilal prajapat</h3>
+            </div>
+        </div>
+        <div class="couple d-flex">
+            <div>
+                <h2>Sushmita</h2>
+                <h3>Mangilal prajapat</h3>
+            </div>
+            <img src="img/sushmita.png" alt="" width="100%">
+        </div>
+    </div>
+
+
+    <!-- timing -->
+
+    <article>
+        <!-- patt -->
+        <div class="patt d-flex">
+            <img src="img/patt.png" alt="" width="50%">
+            <div>
+                <h2>Patt</h2>
+                <h3>16April,2024</h3>
+            </div>
+        </div>
+        <!-- Bandoli -->
+        <div class="patt d-flex">
+            <div>
+                <h2>Bandoli</h2>
+                <h3>17April,2024</h3>
+            </div>
+            <img src="img/bandoli.png" alt="" width="50%">
+        </div>
+        <!-- fera -->
+        <div class="patt d-flex">
+            <img src="img/fera.png" alt="" width="50%">
+            <div>
+                <h2>Subh Vivah</h2>
+                <h3>16April,2024</h3>
+            </div>
+        </div>
+        <!-- Reception -->
+        <div class="patt d-flex">
+            <div>
+                <h2>Pratibhoj</h2>
+                <h3>18April,2024</h3>
+            </div>
+            <img src="img/reception.png" alt="" width="50%">
+        </div>
+    </article>
+
+
+
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("April 18, 2024 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.querySelector(".days").innerHTML = days + "d";
+            document.querySelector(".hours").innerHTML = hours + "h";
+            document.querySelector(".minuts").innerHTML = minutes + "m";
+            document.querySelector(".second").innerHTML = seconds + "s";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelector(".days").innerHTML = "00";
+                document.querySelector(".hours").innerHTML = "00 ";
+                document.querySelector(".minuts").innerHTML = "00 ";
+                document.querySelector(".second").innerHTML = "00 ";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
